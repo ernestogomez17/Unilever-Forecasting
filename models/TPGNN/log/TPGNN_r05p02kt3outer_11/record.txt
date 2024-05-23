@@ -1,0 +1,336 @@
+user config:
+seed 666
+device 1
+scaler StandardScaler()
+day_slot 288
+n_route 228
+n_his 12
+n_pred 12
+n_train 2
+n_val 1
+n_test 1
+mode 1
+n_c 10
+model STAGNN_stamp
+TPG TPGNN
+name PeMS
+log_path log/TPGNN_r05p02kt3outer_11
+crash 11
+new_name TPGNN_r05p02kt3outer_11
+batch_size 50
+lr 0.001
+a 0.1
+r 0.5
+n_mask 1
+adam {'use': True, 'weight_decay': 0.0001}
+slr {'use': True, 'step_size': 400, 'gamma': 0.3}
+resume False
+start_epoch 0
+epochs 250
+n_layer 1
+n_attr 64
+n_hid 512
+reg_A 0.0001
+circle 288
+drop_prob 0.2
+CE {'use': True, 'kernel_size': 1, 'bias': False}
+LE {'use': False, 'bias': False}
+SE {'use': True, 'separate': True, 'no': False}
+TE {'use': True, 'no': True}
+attn {'head': 1, 'd_k': 32, 'd_v': 32, 'drop_prob': 0.2}
+STstamp {'use': True, 'kt': 3, 'temperature': 1.0}
+T4N {'use': True, 'step': 2, 'end_epoch': 10000, 'change_head': True, 'change_enc': True}
+stamp_path data/PeMS/time_stamp.npy
+data_path data/PeMS/V_228.csv
+adj_matrix_path data/PeMS/W_228.csv
+dis_mat tensor([[0.0000, 0.3670, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.3670, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000],
+        ...,
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.2315, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.2315, 0.0000, 0.0000],
+        [0.0000, 0.0000, 0.0000,  ..., 0.0000, 0.0000, 0.0000]],
+       device='cuda:0')
+prefix log/PeMS/
+checkpoint_temp_path log/PeMS//temp.pth
+checkpoint_best_path log/PeMS//best.pth
+tensorboard_path log/PeMS/
+record_path log/PeMS/record.txt
+eps 0.1
+parse <bound method DefaultConfig.parse of <config.DefaultConfig object at 0x7a847378ff40>>
+output <bound method DefaultConfig.output of <config.DefaultConfig object at 0x7a847378ff40>>
+228 10
+epoch 0   PeMS , train loss: 58.966578396883875 , validation loss: 0.644534761706988
+epoch 1   PeMS , train loss: 56.43247535011985 , validation loss: 0.9478471279144287
+epoch 2   PeMS , train loss: 54.206510370427914 , validation loss: 0.6460322539011637
+epoch 3   PeMS , train loss: 52.31804310191762 , validation loss: 0.5690348595380783
+epoch 4   PeMS , train loss: 50.51852798461914 , validation loss: 0.5515510439872742
+epoch 5   PeMS , train loss: 48.81821476329457 , validation loss: 0.5119081363081932
+epoch 6   PeMS , train loss: 47.204497597434305 , validation loss: 0.4857328658302625
+epoch 7   PeMS , train loss: 45.66663638028231 , validation loss: 0.4508557692170143
+epoch 8   PeMS , train loss: 44.19627692482688 , validation loss: 0.43701690932114917
+epoch 9   PeMS , train loss: 42.78988820856268 , validation loss: 0.4734465181827545
+epoch 10   PeMS , train loss: 41.446449279785156 , validation loss: 0.45711052417755127
+epoch 11   PeMS , train loss: 40.15895149924538 , validation loss: 0.41245774924755096
+epoch 12   PeMS , train loss: 38.92342133955522 , validation loss: 0.4312904973824819
+epoch 13   PeMS , train loss: 37.73658058860085 , validation loss: 0.42316625267267227
+epoch 14   PeMS , train loss: 36.599484877152875 , validation loss: 0.41640327125787735
+epoch 15   PeMS , train loss: 35.50595196810636 , validation loss: 0.42304300020138424
+epoch 16   PeMS , train loss: 34.45859805020419 , validation loss: 0.4501885275046031
+epoch 17   PeMS , train loss: 33.454439683394 , validation loss: 0.4551375135779381
+epoch 18   PeMS , train loss: 32.484373959628016 , validation loss: 0.44222654898961383
+epoch 19   PeMS , train loss: 31.545611121437766 , validation loss: 0.4241733253002167
+epoch 20   PeMS , train loss: 30.650460503318094 , validation loss: 0.4792922685543696
+epoch 21   PeMS , train loss: 29.793684872713957 , validation loss: 0.4247576519846916
+epoch 22   PeMS , train loss: 28.95403411171653 , validation loss: 0.39795320729414624
+epoch 23   PeMS , train loss: 28.145051089200106 , validation loss: 0.3950541044274966
+epoch 24   PeMS , train loss: 27.372296766801313 , validation loss: 0.39459021141131717
+epoch 25   PeMS , train loss: 26.62538823214444 , validation loss: 0.39296125372250873
+epoch 26   PeMS , train loss: 25.906882199374113 , validation loss: 0.40382352471351624
+epoch 27   PeMS , train loss: 25.208880164406516 , validation loss: 0.41154098014036816
+epoch 28   PeMS , train loss: 24.54354615644975 , validation loss: 0.4024122804403305
+epoch 29   PeMS , train loss: 23.894785274158824 , validation loss: 0.3963932196299235
+epoch 30   PeMS , train loss: 23.268761894919656 , validation loss: 0.4071001186966896
+epoch 31   PeMS , train loss: 22.66911489313299 , validation loss: 0.4163725773493449
+epoch 32   PeMS , train loss: 22.08049912886186 , validation loss: 0.393086110552152
+epoch 33   PeMS , train loss: 21.51628130132502 , validation loss: 0.40587470680475235
+epoch 34   PeMS , train loss: 20.975292552601207 , validation loss: 0.4080352485179901
+epoch 35   PeMS , train loss: 20.447147369384766 , validation loss: 0.4007226799925168
+epoch 36   PeMS , train loss: 19.934992356733844 , validation loss: 0.4026097357273102
+epoch 37   PeMS , train loss: 19.441165057095613 , validation loss: 0.38171782344579697
+epoch 38   PeMS , train loss: 18.96148040077903 , validation loss: 0.39799629896879196
+epoch 39   PeMS , train loss: 18.4971941167658 , validation loss: 0.3840167621771495
+epoch 40   PeMS , train loss: 18.053321664983574 , validation loss: 0.3880702132980029
+epoch 41   PeMS , train loss: 17.615326968106356 , validation loss: 0.38301514834165573
+epoch 42   PeMS , train loss: 17.195410468361594 , validation loss: 0.3841645320256551
+epoch 43   PeMS , train loss: 16.788281874223188 , validation loss: 0.384557065864404
+epoch 44   PeMS , train loss: 16.390369415283203 , validation loss: 0.38725971430540085
+epoch 45   PeMS , train loss: 16.006565354087137 , validation loss: 0.39207498480876285
+epoch 46   PeMS , train loss: 15.639602054249156 , validation loss: 0.435506875316302
+epoch 47   PeMS , train loss: 15.279172984036533 , validation loss: 0.3805190126101176
+epoch 48   PeMS , train loss: 14.929640856656162 , validation loss: 0.3755921795964241
+epoch 49   PeMS , train loss: 14.58450698852539 , validation loss: 0.3820183550318082
+epoch 50   PeMS , train loss: 14.256914138793945 , validation loss: 0.4358743305007617
+epoch 51   PeMS , train loss: 13.937164740128951 , validation loss: 0.3734736318389575
+epoch 52   PeMS , train loss: 13.62670204856179 , validation loss: 0.373841459552447
+epoch 53   PeMS , train loss: 13.324977788058193 , validation loss: 0.3805328384041786
+epoch 54   PeMS , train loss: 13.029583497480912 , validation loss: 0.3961881200472514
+epoch 55   PeMS , train loss: 12.745285727761008 , validation loss: 0.3979717294375102
+epoch 56   PeMS , train loss: 12.468535683371805 , validation loss: 0.3746429930130641
+epoch 57   PeMS , train loss: 12.197145635431463 , validation loss: 0.43301813552776974
+epoch 58   PeMS , train loss: 11.939019376581365 , validation loss: 0.39419592171907425
+epoch 59   PeMS , train loss: 11.68505503914573 , validation loss: 0.4111524298787117
+epoch 60   PeMS , train loss: 11.438302733681418 , validation loss: 0.37422263125578564
+epoch 61   PeMS , train loss: 11.19432206587358 , validation loss: 0.37281444917122525
+epoch 62   PeMS , train loss: 10.960548921064897 , validation loss: 0.40102580686410266
+epoch 63   PeMS , train loss: 10.73222897269509 , validation loss: 0.37299920121828717
+epoch 64   PeMS , train loss: 10.508226134560324 , validation loss: 0.39099036405483883
+epoch 65   PeMS , train loss: 10.292235547846014 , validation loss: 0.3710404361287753
+epoch 66   PeMS , train loss: 10.081840688532049 , validation loss: 0.3748500943183899
+epoch 67   PeMS , train loss: 9.876922087235885 , validation loss: 0.40938962002595264
+epoch 68   PeMS , train loss: 9.68260383605957 , validation loss: 0.38296232124169666
+epoch 69   PeMS , train loss: 9.485925761136142 , validation loss: 0.3989974285165469
+epoch 70   PeMS , train loss: 9.299419489773838 , validation loss: 0.41357120126485825
+epoch 71   PeMS , train loss: 9.116535013372248 , validation loss: 0.377877913415432
+epoch 72   PeMS , train loss: 8.933199882507324 , validation loss: 0.425991212328275
+epoch 73   PeMS , train loss: 8.760114669799805 , validation loss: 0.37394679834445316
+epoch 74   PeMS , train loss: 8.585343360900879 , validation loss: 0.3727516209085782
+epoch 75   PeMS , train loss: 8.41889494115656 , validation loss: 0.3703546275695165
+epoch 76   PeMS , train loss: 8.254928068681197 , validation loss: 0.3695462594429652
+epoch 77   PeMS , train loss: 8.099248972806064 , validation loss: 0.37893343965212506
+epoch 78   PeMS , train loss: 7.943598487160423 , validation loss: 0.369757001598676
+epoch 79   PeMS , train loss: 7.796390750191429 , validation loss: 0.3922125920653343
+epoch 80   PeMS , train loss: 7.652844298969615 , validation loss: 0.39393769204616547
+epoch 81   PeMS , train loss: 7.505305290222168 , validation loss: 0.36929068466027576
+epoch 82   PeMS , train loss: 7.364849047227339 , validation loss: 0.38394608348608017
+epoch 83   PeMS , train loss: 7.229351130398837 , validation loss: 0.3695201128721237
+epoch 84   PeMS , train loss: 7.0951010964133525 , validation loss: 0.3690627043445905
+epoch 85   PeMS , train loss: 6.964421965859153 , validation loss: 0.3733437856038411
+epoch 86   PeMS , train loss: 6.835918469862505 , validation loss: 0.3799118200937907
+epoch 87   PeMS , train loss: 6.713579741391269 , validation loss: 0.3817355657617251
+epoch 88   PeMS , train loss: 6.594135587865656 , validation loss: 0.3875621308883031
+epoch 89   PeMS , train loss: 6.477282350713557 , validation loss: 0.3730086510380109
+epoch 90   PeMS , train loss: 6.363972360437566 , validation loss: 0.3782530923684438
+epoch 91   PeMS , train loss: 6.2484659281643955 , validation loss: 0.3730884368220965
+epoch 92   PeMS , train loss: 6.135711626573042 , validation loss: 0.36592745284239453
+epoch 93   PeMS , train loss: 6.029264796863902 , validation loss: 0.3871566131711006
+epoch 94   PeMS , train loss: 5.92302825234153 , validation loss: 0.37775375694036484
+epoch 95   PeMS , train loss: 5.821707161990079 , validation loss: 0.3775024389227231
+epoch 96   PeMS , train loss: 5.720486727627841 , validation loss: 0.3673841580748558
+epoch 97   PeMS , train loss: 5.621245731006969 , validation loss: 0.3650343914826711
+epoch 98   PeMS , train loss: 5.5237533829428935 , validation loss: 0.3802737543980281
+epoch 99   PeMS , train loss: 5.43339881029996 , validation loss: 0.38287168741226196
+epoch 100   PeMS , train loss: 5.3419880867004395 , validation loss: 0.3669138352076213
+epoch 101   PeMS , train loss: 5.249529058283025 , validation loss: 0.36740632355213165
+epoch 102   PeMS , train loss: 5.160411054437811 , validation loss: 0.3680831491947174
+epoch 103   PeMS , train loss: 5.075777574018999 , validation loss: 0.38999651620785397
+epoch 104   PeMS , train loss: 4.994228926571933 , validation loss: 0.3636723607778549
+epoch 105   PeMS , train loss: 4.90753798051314 , validation loss: 0.36917471637328464
+epoch 106   PeMS , train loss: 4.829995025287975 , validation loss: 0.36889835447072983
+epoch 107   PeMS , train loss: 4.749377380717885 , validation loss: 0.3637641444802284
+epoch 108   PeMS , train loss: 4.6739910732616075 , validation loss: 0.3946334645152092
+epoch 109   PeMS , train loss: 4.614293228496205 , validation loss: 0.4558967078725497
+epoch 110   PeMS , train loss: 4.541381445798007 , validation loss: 0.4127752110362053
+epoch 111   PeMS , train loss: 4.464020122181285 , validation loss: 0.38862044115861255
+epoch 112   PeMS , train loss: 4.392849662087181 , validation loss: 0.39996766299009323
+epoch 113   PeMS , train loss: 4.314905773509633 , validation loss: 0.3827611332138379
+epoch 114   PeMS , train loss: 4.24418848211115 , validation loss: 0.37209436049064
+epoch 115   PeMS , train loss: 4.17761568589644 , validation loss: 0.3664359673857689
+epoch 116   PeMS , train loss: 4.111814455552534 , validation loss: 0.36721481134494144
+epoch 117   PeMS , train loss: 4.047707687724721 , validation loss: 0.3721073195338249
+epoch 118   PeMS , train loss: 3.9859833934090356 , validation loss: 0.37126053124666214
+epoch 119   PeMS , train loss: 3.925559802488847 , validation loss: 0.37095458805561066
+epoch 120   PeMS , train loss: 3.865721334110607 , validation loss: 0.3788546870152156
+epoch 121   PeMS , train loss: 3.8058559461073442 , validation loss: 0.3646996170282364
+epoch 122   PeMS , train loss: 3.74957554990595 , validation loss: 0.37177951137224835
+epoch 123   PeMS , train loss: 3.6936761899427935 , validation loss: 0.3655667379498482
+epoch 124   PeMS , train loss: 3.6390321904962715 , validation loss: 0.3871891920765241
+epoch 125   PeMS , train loss: 3.5862926786596123 , validation loss: 0.38543032358090085
+epoch 126   PeMS , train loss: 3.5371991070834072 , validation loss: 0.38266215721766156
+epoch 127   PeMS , train loss: 3.48175328428095 , validation loss: 0.38081763436396915
+epoch 128   PeMS , train loss: 3.428341410376809 , validation loss: 0.40213271230459213
+epoch 129   PeMS , train loss: 3.3797012242403897 , validation loss: 0.36567237476507825
+epoch 130   PeMS , train loss: 3.32886663350192 , validation loss: 0.3682919094959895
+epoch 131   PeMS , train loss: 3.280114260586825 , validation loss: 0.3644726599256198
+epoch 132   PeMS , train loss: 3.2315768978812476 , validation loss: 0.36241521934668225
+epoch 133   PeMS , train loss: 3.183242841200395 , validation loss: 0.3634789188702901
+epoch 134   PeMS , train loss: 3.1398734612898394 , validation loss: 0.36930632839600247
+epoch 135   PeMS , train loss: 3.099292841824618 , validation loss: 0.38444432119528454
+epoch 136   PeMS , train loss: 3.0559304627505215 , validation loss: 0.3781384254495303
+epoch 137   PeMS , train loss: 3.0114901932803066 , validation loss: 0.37892848004897434
+epoch 138   PeMS , train loss: 2.968655001033436 , validation loss: 0.3662482102711995
+epoch 139   PeMS , train loss: 2.927233240821145 , validation loss: 0.36231377720832825
+epoch 140   PeMS , train loss: 2.886962890625 , validation loss: 0.3614817038178444
+epoch 141   PeMS , train loss: 2.8453394282947886 , validation loss: 0.3631874571243922
+epoch 142   PeMS , train loss: 2.804037570953369 , validation loss: 0.3673774724205335
+epoch 143   PeMS , train loss: 2.7660926472056997 , validation loss: 0.36209286252657574
+epoch 144   PeMS , train loss: 2.7283485369248823 , validation loss: 0.3649928967158
+epoch 145   PeMS , train loss: 2.6933078549124976 , validation loss: 0.3737035145362218
+epoch 146   PeMS , train loss: 2.6565411524339155 , validation loss: 0.37291612724463147
+epoch 147   PeMS , train loss: 2.621025627309626 , validation loss: 0.36442965269088745
+epoch 148   PeMS , train loss: 2.5862999612634834 , validation loss: 0.3750711952646573
+epoch 149   PeMS , train loss: 2.553437363017689 , validation loss: 0.37193496028582257
+epoch 150   PeMS , train loss: 2.5170497460798784 , validation loss: 0.3620222533742587
+epoch 151   PeMS , train loss: 2.482972816987471 , validation loss: 0.3621081585685412
+epoch 152   PeMS , train loss: 2.4524503404443916 , validation loss: 0.3600187326471011
+epoch 153   PeMS , train loss: 2.4195431795987217 , validation loss: 0.3609363064169884
+epoch 154   PeMS , train loss: 2.388432329351252 , validation loss: 0.36561595648527145
+epoch 155   PeMS , train loss: 2.357253139669245 , validation loss: 0.36675693094730377
+epoch 156   PeMS , train loss: 2.3277802033857866 , validation loss: 0.3611472547054291
+epoch 157   PeMS , train loss: 2.2976687171242456 , validation loss: 0.3617322618762652
+epoch 158   PeMS , train loss: 2.2672726024280894 , validation loss: 0.3605700259407361
+epoch 159   PeMS , train loss: 2.2392427921295166 , validation loss: 0.36286935210227966
+epoch 160   PeMS , train loss: 2.212062857367776 , validation loss: 0.3666117216149966
+epoch 161   PeMS , train loss: 2.1872632936997847 , validation loss: 0.3629598567883174
+epoch 162   PeMS , train loss: 2.1585422212427314 , validation loss: 0.3660571078459422
+epoch 163   PeMS , train loss: 2.132009202783758 , validation loss: 0.36082479109366733
+epoch 164   PeMS , train loss: 2.104372089559382 , validation loss: 0.3629461079835892
+epoch 165   PeMS , train loss: 2.078476060520519 , validation loss: 0.3632664084434509
+epoch 166   PeMS , train loss: 2.053269082849676 , validation loss: 0.3595126047730446
+epoch 167   PeMS , train loss: 2.02701076594266 , validation loss: 0.360720232129097
+epoch 168   PeMS , train loss: 2.005546894940463 , validation loss: 0.3840982789794604
+epoch 169   PeMS , train loss: 1.9813591241836548 , validation loss: 0.3669524962703387
+epoch 170   PeMS , train loss: 1.9538608681071887 , validation loss: 0.36510853717724484
+epoch 171   PeMS , train loss: 1.9366683959960938 , validation loss: 0.39329494039217633
+epoch 172   PeMS , train loss: 1.9128316965970127 , validation loss: 0.3646676490704219
+epoch 173   PeMS , train loss: 1.887726902961731 , validation loss: 0.36690889050563175
+epoch 174   PeMS , train loss: 1.8658586848865857 , validation loss: 0.36601734906435013
+epoch 175   PeMS , train loss: 1.8455319187857888 , validation loss: 0.37030424425999325
+epoch 176   PeMS , train loss: 1.8250656886534258 , validation loss: 0.3952014669775963
+epoch 177   PeMS , train loss: 1.8073617978529497 , validation loss: 0.38897538681825
+epoch 178   PeMS , train loss: 1.783828085119074 , validation loss: 0.36560875674088794
+epoch 179   PeMS , train loss: 1.763214349746704 , validation loss: 0.35464756687482196
+epoch 180   PeMS , train loss: 1.7392337972467595 , validation loss: 0.36050136884053546
+epoch 181   PeMS , train loss: 1.7214869260787964 , validation loss: 0.35615281760692596
+epoch 182   PeMS , train loss: 1.697873592376709 , validation loss: 0.3617980132500331
+epoch 183   PeMS , train loss: 1.680455825545571 , validation loss: 0.36143431067466736
+epoch 184   PeMS , train loss: 1.6628123088316484 , validation loss: 0.3547885889808337
+epoch 185   PeMS , train loss: 1.6411450992931018 , validation loss: 0.3583484465877215
+epoch 186   PeMS , train loss: 1.6250371824611316 , validation loss: 0.3655487845341365
+epoch 187   PeMS , train loss: 1.6070125644857234 , validation loss: 0.3596688856681188
+epoch 188   PeMS , train loss: 1.5896039442582564 , validation loss: 0.35651520142952603
+epoch 189   PeMS , train loss: 1.5717237212441184 , validation loss: 0.3763394132256508
+epoch 190   PeMS , train loss: 1.560904697938399 , validation loss: 0.36316905667384464
+epoch 191   PeMS , train loss: 1.5399934595281428 , validation loss: 0.3645608176787694
+epoch 192   PeMS , train loss: 1.522243944081393 , validation loss: 0.3593599796295166
+epoch 193   PeMS , train loss: 1.507450591434132 , validation loss: 0.35611286014318466
+epoch 194   PeMS , train loss: 1.4920533353632146 , validation loss: 0.3600852812329928
+epoch 195   PeMS , train loss: 1.4729286649010398 , validation loss: 0.3553905040025711
+epoch 196   PeMS , train loss: 1.4596819335764104 , validation loss: 0.3536815047264099
+epoch 197   PeMS , train loss: 1.4462657191536643 , validation loss: 0.37188111742337543
+epoch 198   PeMS , train loss: 1.4301135323264382 , validation loss: 0.36246051142613095
+epoch 199   PeMS , train loss: 1.4121240810914473 , validation loss: 0.3568217356999715
+epoch 200   PeMS , train loss: 1.400223265994679 , validation loss: 0.3616609647870064
+epoch 201   PeMS , train loss: 1.387156757441434 , validation loss: 0.352736401061217
+tensor(472.1822, device='cuda:0')
+MAE: [2.682033623200069, 3.711433536715951, 4.403091683059447, 4.984364734485977] , MAPE: [0.0726750718225948, 0.10304611893482163, 0.12501735474839928, 0.14397977086458325] %, RMSE: [5.175959812172774, 7.148704921824388, 8.401710476521746, 9.350825774226811]
+epoch 202   PeMS , train loss: 1.3691428249532527 , validation loss: 0.3572957863410314
+epoch 203   PeMS , train loss: 1.3541199510747737 , validation loss: 0.36085284998019534
+epoch 204   PeMS , train loss: 1.34107074954293 , validation loss: 0.3533420041203499
+epoch 205   PeMS , train loss: 1.332813111218539 , validation loss: 0.3564741139610608
+epoch 206   PeMS , train loss: 1.3165714632381091 , validation loss: 0.3590245544910431
+epoch 207   PeMS , train loss: 1.302775664763017 , validation loss: 0.3529561385512352
+tensor(459.6712, device='cuda:0')
+MAE: [2.6852760176514994, 3.676077467895667, 4.319748906917976, 4.8079025939733375] , MAPE: [0.07255580918620337, 0.100769693551115, 0.12038334102997979, 0.1352463055511815] %, RMSE: [5.153144056164913, 7.074164239324332, 8.293512857108052, 9.155813412433671]
+epoch 208   PeMS , train loss: 1.2892587401650168 , validation loss: 0.3510967344045639
+tensor(457.6323, device='cuda:0')
+MAE: [2.7414950707305232, 3.7701985084943446, 4.482763984960186, 5.012785284083555] , MAPE: [0.07559039157420608, 0.10707024540336979, 0.12995808113342908, 0.14765534303223388] %, RMSE: [5.229397865555378, 7.1995341558520005, 8.46750880608853, 9.369015792355645]
+epoch 209   PeMS , train loss: 1.275986454703591 , validation loss: 0.36083679894606274
+epoch 210   PeMS , train loss: 1.266977234320207 , validation loss: 0.376984179019928
+epoch 211   PeMS , train loss: 1.2582037882371382 , validation loss: 0.35267603645722073
+epoch 212   PeMS , train loss: 1.2433183084834705 , validation loss: 0.3543345406651497
+epoch 213   PeMS , train loss: 1.2288321581753818 , validation loss: 0.3619002476334572
+epoch 214   PeMS , train loss: 1.215235330841758 , validation loss: 0.34726155052582425
+tensor(445.6689, device='cuda:0')
+MAE: [2.700148112645255, 3.7145436623206165, 4.410976610141099, 4.928541231968276] , MAPE: [0.0742000750594005, 0.10503046196157931, 0.12809702401998457, 0.14520373492504957] %, RMSE: [5.183461351304422, 7.121578405258193, 8.374202115525826, 9.27791006808793]
+epoch 215   PeMS , train loss: 1.206337733702226 , validation loss: 0.35416153570016223
+epoch 216   PeMS , train loss: 1.1935766718604348 , validation loss: 0.3563334395488103
+epoch 217   PeMS , train loss: 1.1815668561241843 , validation loss: 0.3592333247264226
+epoch 218   PeMS , train loss: 1.175597364252264 , validation loss: 0.35576319694519043
+epoch 219   PeMS , train loss: 1.159871589053761 , validation loss: 0.365854615966479
+epoch 220   PeMS , train loss: 1.1516673564910889 , validation loss: 0.3516732156276703
+epoch 221   PeMS , train loss: 1.1384233886545354 , validation loss: 0.3482861742377281
+epoch 222   PeMS , train loss: 1.1281186775727705 , validation loss: 0.34848927954832715
+epoch 223   PeMS , train loss: 1.1154565811157227 , validation loss: 0.3521527747313182
+epoch 224   PeMS , train loss: 1.1061968911777844 , validation loss: 0.34805958221356076
+epoch 225   PeMS , train loss: 1.095993464643305 , validation loss: 0.34899341066678363
+epoch 226   PeMS , train loss: 1.0853944583372637 , validation loss: 0.3551526218652725
+epoch 227   PeMS , train loss: 1.0775307091799649 , validation loss: 0.362775261203448
+epoch 228   PeMS , train loss: 1.069088426503268 , validation loss: 0.34776106973489124
+epoch 229   PeMS , train loss: 1.0582451278513128 , validation loss: 0.34679245203733444
+tensor(417.6552, device='cuda:0')
+MAE: [2.726942215862356, 3.735462552610907, 4.395776056047703, 4.887863667663932] , MAPE: [0.07569511525384393, 0.10674871491070352, 0.12853347968089296, 0.14453166728605957] %, RMSE: [5.223866174340292, 7.1580610928969755, 8.372210470623767, 9.23026874499922]
+epoch 230   PeMS , train loss: 1.0514033816077493 , validation loss: 0.3511959562699
+epoch 231   PeMS , train loss: 1.0379694808613171 , validation loss: 0.3459109887480736
+tensor(414.1106, device='cuda:0')
+MAE: [2.670718139388316, 3.6615656254939473, 4.305722515782707, 4.7741149098854985] , MAPE: [0.07228450068735427, 0.1017326014123745, 0.1218685077686105, 0.1365782960724786] %, RMSE: [5.159159449643977, 7.087262347488299, 8.281590227332833, 9.11589047733777]
+epoch 232   PeMS , train loss: 1.0308839191089978 , validation loss: 0.34637803584337234
+epoch 233   PeMS , train loss: 1.022257772358981 , validation loss: 0.357340340813001
+epoch 234   PeMS , train loss: 1.0148265090855686 , validation loss: 0.3510580013195674
+epoch 235   PeMS , train loss: 1.0044157938523726 , validation loss: 0.3493854800860087
+epoch 236   PeMS , train loss: 0.9960230480540883 , validation loss: 0.35096921026706696
+epoch 237   PeMS , train loss: 0.9891488552093506 , validation loss: 0.3532894129554431
+epoch 238   PeMS , train loss: 0.9833508404818448 , validation loss: 0.3557007734974225
+epoch 239   PeMS , train loss: 0.974084344777194 , validation loss: 0.3520655184984207
+epoch 240   PeMS , train loss: 0.9656351858919318 , validation loss: 0.35083212455113727
+epoch 241   PeMS , train loss: 0.9559998295523904 , validation loss: 0.3703271672129631
+epoch 242   PeMS , train loss: 0.9493336027318781 , validation loss: 0.3505401437481244
+epoch 243   PeMS , train loss: 0.9413834593512795 , validation loss: 0.34565814584493637
+tensor(393.7362, device='cuda:0')
+MAE: [2.697592417639796, 3.721573247186635, 4.433030444172509, 4.97502347755732] , MAPE: [0.0742965338891856, 0.105210168332187, 0.1285119326330846, 0.1462526593675468] %, RMSE: [5.1838326873400336, 7.138856886727194, 8.403757601741024, 9.312605401909602]
+epoch 244   PeMS , train loss: 0.9339100447568026 , validation loss: 0.35021478682756424
+epoch 245   PeMS , train loss: 0.9291968508200212 , validation loss: 0.3445640951395035
+tensor(390.4823, device='cuda:0')
+MAE: [2.6883469390695516, 3.654745063301113, 4.324744356428302, 4.857762594157519] , MAPE: [0.07281027884596637, 0.10152554737838441, 0.12233777246014796, 0.13818201613160946] %, RMSE: [5.151825577524667, 7.040099145681967, 8.239148650202207, 9.113261552234464]
+epoch 246   PeMS , train loss: 0.9190292466770519 , validation loss: 0.34684059272209805
+epoch 247   PeMS , train loss: 0.9121783375740051 , validation loss: 0.34831735243399936
+epoch 248   PeMS , train loss: 0.9043527841567993 , validation loss: 0.35174592584371567
+epoch 249   PeMS , train loss: 0.8960294777696783 , validation loss: 0.34647806733846664
+test loss: NIL 
+MAE: [2.6883469390695516, 3.654745063301113, 4.324744356428302, 4.857762594157519] , MAPE: [0.07281027884596637, 0.10152554737838441, 0.12233777246014796, 0.13818201613160946] %, RMSE: [5.151825577524667, 7.040099145681967, 8.239148650202207, 9.113261552234464]
+====================
+training elapsedd with 1805.70 seconds for 250 iterations, the sec/iter = 7.22
+
+MAE_mean: [2.68834694 3.65474506 4.32474436 4.85776259] , MAPE_mean: [0.07281028 0.10152555 0.12233777 0.13818202] , RMSE_mean: [5.15182558 7.04009915 8.23914865 9.11326155]
+
+MAE_std: [nan nan nan nan] , MAPE_std: [nan nan nan nan] , RMSE_std: [nan nan nan nan]
