@@ -7,7 +7,8 @@ from sklearn.preprocessing import StandardScaler, OneHotEncoder
 
 
 def gen_stamp(data_path,data_root,cycle):
-    data = pd.read_csv(data_path, header=None).values.astype(float)
+    # for rainfall dataset only considers first 50 internal variables
+    data = pd.read_csv(data_path, header=None, usecols=range(50)).values.astype(float)
     T, N = data.shape
     time_stamp = np.zeros(T)
     for idx in range(T):
