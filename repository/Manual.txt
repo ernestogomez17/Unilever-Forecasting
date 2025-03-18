@@ -1,0 +1,31 @@
+1. Data Preparation:
+
+	I. data_cleaning_npz_nix: Unilever Dataset Preparation
+
+		> Input: This file takes two "npz" files, one for timestamp and other for data. Input files are available and can be changed in 2nd cell.
+
+		> Output: A compatible csv file for our StemGNN implementations.
+
+	II. data_preparation: Walmart Dataset Preparation
+
+		> Input: This file takes two "csv" files, one for timestamp and other for data. Input files are available and can be changed in 2nd and 3rd cell.
+
+		> Output: Four compatible csv file for our StemGNN implementations. Two of them are daily and the other 2 are weekly. In each subgroup one is filtered and the other one contains all data with no elimination. The number of eliminated consecutive zeros can be changed in 6th cell.
+
+2. Implementation:
+
+	III. SG_nix_implementation_tuning: Hyperparameter Tuning
+
+		> Input: A file that was derived from "Data Preparation" step. It can be changed from 2nd cell.
+
+		> Output: A csv file contains metrics for each hyperparameters setting sorted from best to worst. In 5th cell hyperparameter values can be set.
+
+	IV. SG_nix_implementation_nt_pred: Prediction
+
+		> Input: A file that was derived from "Data Preparation" step, and hyperparameter setting from "Hyperparameter Tuning" step. These can be changed from 2nd and 5th cell.
+
+		> Output: A csv file contains predictions in required format by Unilever, and trained weights in "checkpoints" directory.
+
+3. Auxiliary
+
+	V. extrametrics: This file contains code snippets for "WMAPE" and "R^2". 
